@@ -11,6 +11,7 @@ phases:
      - echo "build step"     
      - pwd                    
      - aws ec2 run-instances --image-id ami-0022f774911c1d690 --instance-type t2.micro --subnet-id subnet-e38e70af --count 1 --security-group-ids sg-0197b8159a5d886f8 --key-name private-ec2	--user-data file://apache2.sh
+     - echo "did we make it?"     
  post_build:
    commands:
      - echo "Nothing to do in the post_build step"  
